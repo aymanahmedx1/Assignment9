@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ayman Ahmed">
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="images/bookmark.ico" type="image/x-icon">
+    <!-- ^ Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Whisper&display=swap"
+        rel="stylesheet">
+    <!--! Font Awesome-->
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <!--^ Bootstrap-->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <!--& Main Style-->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!--~ Media Style-->
+    <link rel="stylesheet" href="CSS/media.css">
+</head>
+
+<body>
+    <section class="home">
+        <div class="container pt-5 pb-2">
+            <div class="title text-center pb-5">
+                <h1 class="position-relative">Bookmarker</h1>
+            </div>
+            <div class="input-area">
+                <div class="input-title text-center d-flex flex-row justify-content-center align-items-center">
+                    <i class="fa-regular fa-bookmark fa-xl"></i>
+                    <h2 class="mx-3 text-muted m-0">Bookmark your favorite sites </h2>
+                </div>
+                <div class="content w-75 mx-auto py-3">
+                    <label for="siteName" class="form-label"><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+                    <input type="text" name="siteName" id="siteName" class="form-control mb-3"
+                        placeholder="Bookmark Name">
+                    <label for="siteUrl" class="form-label"><i class="fa-solid fa-link"></i> Site URL</label>
+                    <input type="text" name="siteUrl" id="siteUrl" class="form-control mb-3" placeholder="Website URL">
+                </div>
+            </div>
+            <div class="save-button w-75 d-flex justify-content-center align-items-center mx-auto pb-3">
+                <button class="btn custom-btn px-5 " id="saveBtn"> Submit</button>
+            </div>
+            <!-- <div class="divider mb-3 mx-auto"></div> -->
+            <div class="table-area ">
+                <table class="table table-striped text-center">
+                    <thead >
+                        <tr>
+                            <th>Index</th>
+                            <th>Website Name</th>
+                            <th>Visit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </section>
+    <div id="splash" class="splash position-fixed d-none justify-content-center align-items-center ">
+        <div  class="splash-box  bg-white px-5 py-4 rounded-4"  >
+        <div class="d-flex justify-content-between flex-row-reverse pb-3">
+            <div class="close">
+                <i id="close" class="fa fa-close fa-xl "></i>
+            </div>
+            <div class="icons">
+                <i class="fa-solid fa-circle tomato pe-2"></i>
+                <i class="fa-solid fa-circle yellow pe-2"></i>
+                <i class="fa-solid fa-circle green"></i>
+            </div>
+        </div> 
+        <div class="content ">
+            <h5 class="fw-bold pb-3">Site Name or Url is not valid, Please follow the rules below :
+            </h5>
+          <p><i class="fa-regular fa-circle-right pe-2 fs-5"></i> Site name must contain at least 3 characters</p>
+          <p><i class="fa-regular fa-circle-right pe-2 fs-5"></i>Site URL must be a valid one</p>
+        </div>           
+        </div>
+    </div>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/script.js"></script>
+</body>
+
+</html>

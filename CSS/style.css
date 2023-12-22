@@ -1,0 +1,111 @@
+:root {
+    --main-color: #0E21A0;
+    --second-color: #4D2DB7;
+}
+
+body {
+    background-color: #E1E1E1;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-family: 'Whisper', cursive;
+    font-size: 4.6875rem;
+    font-weight: 800;
+    color: var(--main-color);
+    transition: all .5s;
+}
+h1:hover::after{
+    width: 25% ; 
+
+}
+
+h1::after {
+    content: "";
+    background-color: var(--second-color);
+    position: absolute;
+    width: 15%;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    transition: all .5s;
+}
+.input-area {
+    position: relative;
+}
+
+i {
+    color: var(--main-color);
+}
+.form-control:focus {
+    border-color: var(--main-color);
+    box-shadow: 0 0 0 0.25rem rgba(77, 45, 183, .25);
+}
+
+.divider {
+    background-color: var(--second-color);
+    height: 3px;
+    width: 15%;
+}
+
+.custom-btn {
+    background-color: var(--main-color);
+    color: white;
+    transition: all .5s;
+    position: relative;
+    margin-bottom: 20px;
+}
+.custom-btn::after{
+    content: "";
+    position: absolute;
+    background-color: var(--second-color);
+    height: 3px;
+    width: 100%;
+    bottom: -15px;
+    left: 50%;
+    transition: all .5s;
+    transform: translate(-50%);
+}
+.custom-btn:hover {
+    background-color: white;
+    color: var(--main-color);
+    box-shadow: 0 0 0 0.25rem rgba(77, 45, 183, .25);
+}
+.custom-btn:hover::after{
+    width: 25%;
+}
+.splash {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+}
+.close i{
+    cursor: pointer;
+    color: black;
+    transition: color .5s;
+}
+.close i:hover{
+    color: var(--second-color);
+}
+.splash .splash-box {
+    width: 550px;
+}
+
+.tomato {
+    color: tomato;
+    font-size: 20px;
+}
+
+.yellow {
+    color: yellow;
+    font-size: 20px;
+
+}
+.green {
+    color: green;
+    font-size: 20px;
+}
